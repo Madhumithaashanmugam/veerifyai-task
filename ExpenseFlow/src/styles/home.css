@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f8fafc;
+  font-family: Inter, sans-serif;
+  color: #0f172a;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.home-container {
+  min-height: 100vh;
+  width: 100%;
+  background: #f8fafc;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 56px 170px;
+}
+
+.home-wrapper {
+  width: 100%;
+  max-width: 1260px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  margin-bottom: 42px;
+  max-width: 720px;
+}
+
+.platform-title {
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  color: #64748b;
+
+  margin-bottom: 14px;
+}
+
+.header h1 {
+  font-size: 32px;
+
+  line-height: 1.12;
+
+  font-weight: 450;
+
+  letter-spacing: -1.5px;
+
+  color: #0f172a;
+
+  margin-bottom: 14px;
+}
+
+.header-description {
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  color: #64748b;
+
+  max-width: 640px;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.workspace-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.workspace-card {
+  background: #ffffff;
+
+  border: 1px solid #dbe3ee;
+
+  border-radius: 22px;
+
+  min-height: 560px;
+
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: all 0.25s ease;
+}
+
+.workspace-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #cbd5e1;
+
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.05);
+}
+
+/* =========================
+   TOP
+========================= */
+
+.workspace-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.icon-box {
+  width: 54px;
+  height: 54px;
+
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box svg {
+  font-size: 20px;
+}
+
+.employee-icon {
+  background: #e8f2fa;
+  color: #0284c7;
+}
+
+.reviewer-icon {
+  background: #fbf1e5;
+  color: #d97706;
+}
+
+.controller-icon {
+  background: #eef2f6;
+  color: #475569;
+}
+
+.workspace-subtitle {
+  font-size: 11px;
+
+  font-weight: 450;
+
+  letter-spacing: 1.7px;
+
+  color: #64748b;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.workspace-title {
+  font-size: 22px;
+
+  font-weight: 450;
+
+  color: #0f172a;
+
+  margin-bottom: 10px;
+}
+
+.workspace-description {
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  color: #64748b;
+
+  margin-bottom: 28px;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+  margin-bottom: 22px;
+}
+
+.section-title {
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #64748b;
+
+  margin-bottom: 12px;
+}
+
+.section-list {
+  padding-left: 18px;
+}
+
+.section-list li {
+  font-size: 14px;
+
+  line-height: 1.9;
+
+  color: #0f172a;
+}
+
+.workflow-list li {
+  color: #64748b;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.workspace-footer {
+  border-top: 1px solid #e2e8f0;
+
+  padding-top: 18px;
+}
+
+.workspace-button {
+  width: 100%;
+
+  border: none;
+
+  background: transparent;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: 450;
+
+  color: #0f172a;
+}
+
+.workspace-button svg {
+  font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1280px) {
+  .home-container {
+    padding: 48px 70px;
+  }
+
+  .workspace-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-container {
+    padding: 42px 22px;
+  }
+
+  .workspace-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .workspace-card {
+    min-height: auto;
+  }
+
+  .header h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-container {
+    padding: 30px 16px;
+  }
+
+  .header {
+    margin-bottom: 30px;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+
+  .header-description {
+    font-size: 14px;
+  }
+
+  .workspace-card {
+    padding: 20px;
+  }
+
+  .workspace-title {
+    font-size: 20px;
+  }
+
+  .workspace-description {
+    font-size: 13px;
+  }
+
+  .section-list li {
+    font-size: 13px;
+  }
+}
