@@ -7,7 +7,7 @@ import EvidenceValidation from "../components/reviewer/EvidenceValidation";
 import ReviewDecision from "../components/reviewer/ReviewDecision";
 import WorkflowOwnership from "../components/reviewer/WorkflowOwnership";
 import ReviewerReminders from "../components/reviewer/ReviewerReminders";
-import AuditTimeline from "../components/employee/AuditTimeline";
+import AuditTimeline from "../components/reviewer/AuditTimeline";
 import ReviewerRemarksModal from "../components/reviewer/ReviewerRemarksModal";
 import SuccessPopup from "../components/popups/SuccessPopup";
 import ErrorPopup from "../components/popups/ErrorPopup";
@@ -72,9 +72,7 @@ const FinanceReviewer = () => {
               </div>
 
               {selectedClaim && (
-                <span
-                  className={`status-badge large`}
-                >
+                <span className="status-badge large">
                   {selectedClaim.status.replaceAll(
                     "_",
                     " "
@@ -136,8 +134,8 @@ const FinanceReviewer = () => {
                 />
 
                 <AuditTimeline
-                  createdAt={
-                    selectedClaim.createdAt
+                  items={
+                    selectedClaim.auditTimeline || []
                   }
                 />
               </>
